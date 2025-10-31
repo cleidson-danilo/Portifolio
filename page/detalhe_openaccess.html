@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenAcess | Detalhes do Projeto</title>
+
+  <!-- CSS Base (mesmo do EstudaFácil e Segurança Digital) -->
+  <link rel="stylesheet" href="../css/dt_estudafacil.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Botão voltar -->
+    <div class="back-btn">
+      <a href="../index.html#projects" class="minimal-btn">
+        <i class="fas fa-arrow-left"></i> Voltar
+      </a>
+      <span> Projetos ❯ OpenAcess</span>
+    </div>
+
+    <!-- Header do Projeto -->
+    <div class="project-header animate-right">
+
+      <!-- Imagem -->
+      <div class="project-image animate-left">
+        <img src="../img/openacess.png" alt="OpenAcess Preview">
+      </div>
+
+      <!-- Texto -->
+      <div class="project-text animate-right">
+        <h1 id="openacess-title" class="eco-title">
+          OpenAcess <span><i class="fas fa-wheelchair"></i></span>
+        </h1>
+
+        <p>
+          Plataforma de mapeamento interativo baseada em dados abertos para visualizar e classificar acessibilidade urbana em Pernambuco.
+        </p>
+
+        <div class="stats">
+          <div class="stat"><span><i class="fas fa-map-marker-alt"></i> PE</span><br>Região</div>
+          <div class="stat"><span><i class="fas fa-calendar-alt"></i> 2025</span><br>Protótipo</div>
+          <div class="stat"><span><i class="fas fa-universal-access"></i></span><br>Inclusão</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Descrição -->
+    <section class="animate-left">
+      <h2><i class="fas fa-info-circle"></i> Descrição</h2>
+      <p>
+        O OpenAcess consolida dados da Overpass API para exibir pontos acessíveis, limitados e não acessíveis no estado de Pernambuco, permitindo consulta eficiente e inclusiva para usuários.
+      </p>
+      <p>
+        Prova de conceito com experiência responsiva para desktop e dispositivos móveis.
+      </p>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section class="features animate-right">
+      <h2><i class="fas fa-cogs"></i> Funcionalidades</h2>
+      <ul>
+        <li>Busca por voz e texto</li>
+        <li>Cluster de marcadores com Leaflet</li>
+        <li>Classificação visual de acessibilidade</li>
+        <li>Favoritos com LocalStorage</li>
+        <li>Filtros por tipo e categoria</li>
+      </ul>
+    </section>
+
+    <!-- Tecnologias -->
+    <section class="animate-left">
+      <h2><i class="fas fa-tools"></i> Tecnologias</h2>
+      <div class="tech-list">
+        <span class="tag"><i class="fab fa-html5"></i> HTML5</span>
+        <span class="tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+        <span class="tag"><i class="fab fa-js-square"></i> JavaScript</span>
+        <span class="tag"><i class="fas fa-map"></i> Leaflet</span>
+        <span class="tag"><i class="fas fa-database"></i> Overpass API</span>
+        <span class="tag"><i class="fas fa-server"></i> Vercel</span>
+      </div>
+    </section>
+
+    <!-- Equipe -->
+    <section class="animate-right">
+      <h2><i class="fas fa-users"></i> Equipe</h2>
+      <p>Projeto acadêmico desenvolvido para impacto social.</p>
+
+      <ul>
+        <li><strong>Cleidson Danilo</strong> — Integração de dados, Versionamento e arquitetura</li>
+        <li><strong>Enzo Grippe</strong> — UX/UI e responsividade</li>
+        <li><strong>Jhessemiel Nascimento</strong> — Documentação</li>
+        <li><strong>Fabio Cosdem</strong> — Interfaces e funcionalidades</li>
+        <li><strong>Pablo Luciano</strong> — Interfaces e validação</li>
+      </ul>
+
+      <p><strong>Próximos passos:</strong> back-end colaborativo para validação comunitária.</p>
+    </section>
+
+  </div>
+
+  <!-- Script máquina de escrever -->
+  <script>
+    const title = document.getElementById('openacess-title');
+    const text = 'OpenAcess';
+    const icon = ' <span><i class="fas fa-wheelchair"></i></span>';
+    let i = 0;
+
+    function typeWriter() {
+      if (i <= text.length) {
+        title.innerHTML = text.substring(0, i) + icon;
+        i++;
+        setTimeout(typeWriter, 90);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      typeWriter();
+      document.querySelectorAll('.animate-left, .animate-right').forEach((el, idx) => {
+        setTimeout(() => { el.style.opacity = 1; }, 200 + idx * 150);
+      });
+    });
+  </script>
+</body>
+</html>
